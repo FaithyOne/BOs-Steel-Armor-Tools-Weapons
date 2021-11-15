@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "material_elements:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "steel_armor_tools_weapons:steel_shovel"
+  }
+}

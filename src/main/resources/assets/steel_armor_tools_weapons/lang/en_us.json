@@ -2,6 +2,10 @@
   "block.placeholder.text": "Template placeholder do not remove!",
 
   "item.steel_armor_tools_weapons.steel_sword": "Steel Sword",
+  "item.steel_armor_tools_weapons.steel_shovel": "Steel Shovel",
+  "item.steel_armor_tools_weapons.steel_pickaxe": "Steel Pickaxe",
+  "item.steel_armor_tools_weapons.steel_axe": "Steel Axe",
+  "item.steel_armor_tools_weapons.steel_hoe": "Steel Hoe",
 
   "item.placeholder.text": "Template placeholder do not remove!"
 }
