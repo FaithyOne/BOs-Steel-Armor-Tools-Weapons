@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "steel_armor_tools_weapons:item/steel_boots"
-  }
-}
