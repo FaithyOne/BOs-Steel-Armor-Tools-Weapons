@@ -128,6 +128,7 @@ dependencies {
     implementation fg.deobf("curse.maven:material_elements-541620:${material_elements_version}")
 
     // Additional helpful Mods for development (runtime depenedency)
+    runtimeOnly fg.deobf("curse.maven:jei-238222:3526062")
     runtimeOnly fg.deobf("curse.maven:item-zoom-261725:3485445")
     runtimeOnly fg.deobf("curse.maven:spark-361579:3485140")
 }

@@ -19,10 +19,14 @@
 
 package de.markusbordihn.steelarmortoolsweapons.item;
 
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import de.markusbordihn.materialelements.item.ModTiers;
 import de.markusbordihn.steelarmortoolsweapons.Constants;
 import de.markusbordihn.steelarmortoolsweapons.Annotations.TemplateEntryPoint;
 
@@ -36,6 +40,9 @@ public class ModItems {
       DeferredRegister.create(ForgeRegistries.ITEMS, Constants.MOD_ID);
 
   @TemplateEntryPoint("Register Items")
+  public static final RegistryObject<Item> STEEL_SWORD =
+      ITEMS.register("steel_sword", () -> new SwordItem(ModTiers.STEEL, 3, -2.4F,
+          (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
 
   @TemplateEntryPoint("Register Block Items")
 
