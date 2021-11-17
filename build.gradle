@@ -171,7 +171,7 @@ curseforge {
   apiKey = "${credentials.curseforge_api_token}"
   project {
     id = "${curseforge_project_id}"
-    changelog = '[[ --Change Log-- ]]'
+    changelog = 'See https://github.com/MarkusBordihn/BOs-Steel-Armor-Tools-Weapons/commits/main'
     releaseType = 'release'
     addGameVersion("1.17.1")
     addGameVersion("Forge")
