@@ -20,16 +20,21 @@
 package de.markusbordihn.steelarmortoolsweapons.item;
 
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
+
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import de.markusbordihn.materialelements.item.ModArmorMaterials;
 import de.markusbordihn.materialelements.item.ModTiers;
 import de.markusbordihn.steelarmortoolsweapons.Constants;
 import de.markusbordihn.steelarmortoolsweapons.Annotations.TemplateEntryPoint;
@@ -43,10 +48,16 @@ public class ModItems {
 
   @TemplateEntryPoint("Register Items")
 
+  // Steel Weapons
   public static final RegistryObject<Item> STEEL_SWORD =
       ITEMS.register("steel_sword", () -> new SwordItem(ModTiers.STEEL, 3, -2.4F,
           (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
 
+  public static final RegistryObject<Item> STEEL_CROSSBOW =
+      ITEMS.register("steel_crossbow", () -> new CrossbowItem(
+          (new Item.Properties()).stacksTo(1).tab(CreativeModeTab.TAB_COMBAT).durability(435)));
+
+  // Steel Tools
   public static final RegistryObject<Item> STEEL_SHOVEL =
       ITEMS.register("steel_shovel", () -> new ShovelItem(ModTiers.STEEL, 1.5F, -3.0F,
           (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
@@ -63,6 +74,22 @@ public class ModItems {
       ITEMS.register("steel_hoe", () -> new HoeItem(ModTiers.STEEL, -2, -1.0F,
           (new Item.Properties()).tab(CreativeModeTab.TAB_TOOLS)));
 
+  // Steel Armor
+  public static final RegistryObject<Item> STEEL_BOOTS =
+      ITEMS.register("steel_boots", () -> new ArmorItem(ModArmorMaterials.STEEL, EquipmentSlot.FEET,
+          (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
+
+  public static final RegistryObject<Item> STEEL_HELMET =
+      ITEMS.register("steel_helmet", () -> new ArmorItem(ModArmorMaterials.STEEL,
+          EquipmentSlot.HEAD, (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
+
+  public static final RegistryObject<Item> STEEL_LEGGINGS =
+      ITEMS.register("steel_leggings", () -> new ArmorItem(ModArmorMaterials.STEEL,
+          EquipmentSlot.LEGS, (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
+
+  public static final RegistryObject<Item> STEEL_CHESTPLATE =
+      ITEMS.register("steel_chestplate", () -> new ArmorItem(ModArmorMaterials.STEEL,
+          EquipmentSlot.CHEST, (new Item.Properties()).tab(CreativeModeTab.TAB_COMBAT)));
 
   @TemplateEntryPoint("Register Block Items")
 

@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/crossbow",
+    "textures": {
+        "layer0": "steel_armor_tools_weapons:item/steel_crossbow_pulling_0"
+    }
+}
